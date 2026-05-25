@@ -1,1 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>3D Element Model | Element Explorer 3D</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="model-header">
+      <a class="back-link" href="index.html">← Back to Periodic Table</a>
+
+      <div class="model-title">
+        <p class="eyebrow">3D Atom Viewer</p>
+        <h1 id="elementName">Element</h1>
+        <p id="elementSubtitle">Interactive atom model</p>
+      </div>
+    </header>
+
+    <main class="model-layout">
+      <section class="atom-panel">
+        <div id="atomScene" class="atom-scene"></div>
+      </section>
+
+      <aside class="element-info-panel">
+        <div id="elementTile" class="large-element-tile"></div>
+
+        <div class="info-grid">
+          <article>
+            <span>Atomic Number</span>
+            <strong id="atomicNumber">0</strong>
+          </article>
+
+          <article>
+            <span>Symbol</span>
+            <strong id="elementSymbol">--</strong>
+          </article>
+
+          <article>
+            <span>Category</span>
+            <strong id="elementCategory">Unknown</strong>
+          </article>
+
+          <article>
+            <span>Period</span>
+            <strong id="elementPeriod">0</strong>
+          </article>
+
+          <article>
+            <span>Group</span>
+            <strong id="elementGroup">0</strong>
+          </article>
+
+          <article>
+            <span>Electron Shells</span>
+            <strong id="electronShells">0</strong>
+          </article>
+        </div>
+
+        <div class="shell-panel">
+          <h3>Electron Distribution</h3>
+          <div id="shellList" class="shell-list"></div>
+        </div>
+
+        <div class="note-panel small-note-panel">
+          <h3>Learning Note</h3>
+          <p>
+            This 3D view is a simplified visual model. Real electrons do not orbit
+            the nucleus like planets, but this view helps beginners understand shells
+            and atomic number.
+          </p>
+        </div>
+      </aside>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="model.js"></script>
+</body>
+</html>
