@@ -1,1 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <title>Element Explorer 3D | Periodic Table</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <nav class="navbar">
+        <div class="brand">
+          <div class="brand-icon">⚛</div>
+          <div>
+            <h1>Element Explorer 3D</h1>
+            <p>Interactive periodic table with 3D atom models</p>
+          </div>
+        </div>
+
+        <a class="nav-link" href="#periodicTable">Explore Elements</a>
+      </nav>
+
+      <section class="hero-grid">
+        <div>
+          <p class="eyebrow">Science Portfolio Project</p>
+          <h2>Click any element to open its 3D atom model.</h2>
+          <p>
+            Search, filter, and explore all 118 elements. Each element links to a
+            generated 3D Bohr-style atom model with element details.
+          </p>
+        </div>
+
+        <div class="hero-card">
+          <div class="mini-atom">
+            <span></span>
+            <span></span>
+            <span></span>
+            <strong>3D</strong>
+          </div>
+
+          <h3>Built for learning</h3>
+          <p>
+            Great for students, science learners, teachers, and anyone exploring chemistry basics.
+          </p>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="controls-panel">
+        <div class="search-box">
+          <label for="searchInput">Search Element</label>
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="Search Hydrogen, Fe, Oxygen..."
+          />
+        </div>
+
+        <div class="filter-box">
+          <label for="categoryFilter">Filter Category</label>
+          <select id="categoryFilter">
+            <option value="all">All Categories</option>
+          </select>
+        </div>
+
+        <button id="clearButton" class="clear-button" type="button">
+          Clear Filters
+        </button>
+      </section>
+
+      <section class="legend" id="legend"></section>
+
+      <section class="table-header">
+        <div>
+          <p class="eyebrow">Periodic Table</p>
+          <h2>All Elements</h2>
+        </div>
+
+        <p id="resultCount">Showing 118 elements</p>
+      </section>
+
+      <section id="periodicTable" class="periodic-table"></section>
+
+      <section class="note-panel">
+        <h3>About the 3D Model</h3>
+        <p>
+          The atom viewer uses a simplified Bohr-style model for visual learning.
+          It is not meant to represent exact quantum orbital shapes.
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
